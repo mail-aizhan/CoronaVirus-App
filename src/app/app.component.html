@@ -1,0 +1,14 @@
+<div class="corona-plus">
+  <h1>CoronaVirus Live Tracker in Angular</h1>
+  <label class="label">Country </label><br>
+  <select (change)="getCountry($event.target.value)">
+    <option *ngFor="let country of countries" value={{country.Slug}}>
+{{country.Country}}
+  </option>
+</select>
+<br><br>
+<button (click)="getCoronaData()"> Get CoronaVirus Data</button>
+<h2>Total Conrirmed Cases:{{confirmed}} </h2>
+<h2>Total Recovered Cases:{{recovered}} </h2>
+<h2>Total Death Cases:{{deaths}} </h2>
+</div>
